@@ -257,5 +257,26 @@
         <span class="copyright">Сделано&nbsp;в&nbsp;HTML&nbsp;Academy&nbsp;©&nbsp;2019</span>
       </div>
     </footer>
+		<section class="modal modal-contact">
+			<h2 class="modal-contact-title">Мы обязательно вам ответим!</h2>
+			<form class="contact-form" id="contact-form" action="https://echo.htmlacademy.ru/" method="POST">
+				<p class="contact-form-name">
+					<label class="form-label visually-hidden" for="user-name">Ваше имя:</label>
+					<input class="contact-form-field" type="text" id="user-name" name="contact-name" placeholder="Имя Фамилия">
+				</p>
+				<p class="contact-form-email">
+					<label class="form-label visually-hidden" for="user-email">Ваш e-mail:</label>
+					<input class="contact-form-field" type="email" id="user-email" name="user-email"
+						placeholder="email@example.com">
+				</p>
+				<p class="contact-form-message">
+					<label class="form-label visually-hidden" for="user-massage">Текст письма:</label>
+					<textarea class="contact-form-textarea" id="user-massage" name="user-message"
+						placeholder="В свободной форме"></textarea>
+				</p>
+				<button class="contact-form-btn btn" type="submit" aria-label="Отправить заявку">Отправить</button>
+			</form>
+			<button class="modal-close" type="button" aria-label="Закрыть"></button>
+		</section>
   </body>
 </html>
