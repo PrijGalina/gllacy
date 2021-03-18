@@ -11,70 +11,73 @@
     <link href="css/normalize.min.css" rel="stylesheet">
     <link href="css/style.css" rel="stylesheet">
   </head>
-  <body class="page-body">
-    <header class="main-header">
+  <body class="page-body page-green">
+    <header class="main-header inner-container">
       <nav class="main-navigation">
         <a class="header-logo" href="index.html" aria-label="Ссылка для перехода на главную страницу сайта">
-          <img src="/img/logo.svg" width="154" height="64" alt="Логотип магазина Глэйси, это онлайн и офлайн-магазин по продаже мороженого собственного производства на развес">
+          <img src="img/logo.svg" width="154" height="64" alt="Логотип магазина Глэйси, это онлайн и офлайн-магазин по продаже мороженого собственного производства на развес">
         </a>
         <ul class="site-navigation clear-list">
-          <li class="site-navigation-item">
-            <a href="" class="catalog-menu-link active-link">Каталог</a>
+          <li class="site-navigation-item catalog-parent-item current-page">
+            <a class="site-navigation-link default-link">Каталог</a>
             <ul class="catalog-submenu-list clear-list">
               <li class="catalog-submenu-item">
-                <a href="" class="catalog-submenu-link">Новинки</a>
+                <a class="catalog-submenu-link default-link" href="#">Новинки</a>
               </li>
               <li class="catalog-submenu-item">
-                <a href="catalog.html" class="catalog-submenu-link">Сливочное</a>
+                <a class="catalog-submenu-link default-link" href="catalog.html">Сливочное</a>
               </li>
               <li class="catalog-submenu-item">
-                <a href="#" class="catalog-submenu-link">Щербеты</a>
+                <a class="catalog-submenu-link default-link" href="#">Щербеты</a>
               </li>
               <li class="catalog-submenu-item">
-                <a href="#" class="catalog-submenu-link">Фруктовый лед</a>
+                <a class="catalog-submenu-link default-link" href="#">Фруктовый лед</a>
               </li>
               <li class="catalog-submenu-item">
-                <a href="#" class="catalog-submenu-link">Мелорин</a>
+                <a class="catalog-submenu-link default-link" href="#">Мелорин</a>
               </li>
             </ul> 
           </li>
           <li class="site-navigation-item">
-            <a href="" class="site-navigation-link" title="">Доставка и оплата</a>
+            <a class="site-navigation-link default-link" href="#" title="">Доставка и оплата</a>
           </li>
           <li class="site-navigation-item">
-            <a href="" class="site-navigation-link" title="">О компании</a>
+            <a class="site-navigation-link default-link" href="#" title="">О компании</a>
           </li>
         </ul>
         <ul class="user-navigation clear-list">
-          <li class="user-navigation-item">
-            <a href="" class="user-navigation-link" title="">Поиск</a>
+          <li class="user-navigation-item search-item">
+            <a class="user-navigation-link search-link" href="#" title="">
+              <span class="visually-hidden">Поиск</span>
+            </a>
             <form class="search-form" action="https://echo.htmlacademy.ru/" method="GET">
-              <input class="search-form-field" type="search" name="search" placeholder="Крем-брюле" value="" required>
-              <button class="search-form-btn" type="submit">Найти</button>
+              <input class="form-text-field search-form-field" type="search" name="search" placeholder="Крем-брюле" value="" required>
+              <!--<button class="search-form-btn" type="submit">Найти</button>-->
             </form>
           </li>
           <li class="user-navigation-item login-item">
-            <a href="" class="user-navigation-link login-link" title="">Вход</a>
+            <a class="user-navigation-link login-link default-link" href="#" title="">Вход</a>
             <form class="login-form" action="https://echo.htmlacademy.ru/" method="POST">
-              <p class="">
-                <label class="login-form-label visually-hidden" for="">
-                <input class="" id="" type=""  name="" placeholder="">
+              <p class="login-form-row">
+                <label class="login-form-label visually-hidden" for="login-form-user-email"></label>
+                <input class="form-text-field
+                login-form-field" id="login-form-user-email" type="email" name="login-user-email" placeholder="email@example.com">
               </p>
-              <p class="">
-                <label class="login-form-label visually-hidden" for="">
-                <input class="" id="" type=""  name="" placeholder="">
+              <p class="login-form-row">
+                <label class="login-form-label visually-hidden" for="login-form-user-pass"></label>
+                <input class="form-text-field login-form-field" id="login-form-user-pass" type="password" name="login-user-pass" placeholder="......">
               </p>
               <div class="login-form-footer">
                 <button class="login-form-btn btn" type="submit">Войти</button>
-                <p class="">
-                  <a href="" class="restore-password">Забыли пароль?</a>
-                  <a href="" class="registration">Новая регистрация</a>
+                <p class="login-form-help">
+                  <a class="restore-password default-link underline" href="#" title="Восстановить пароль">Забыли пароль?</a>
+                  <a class="registration default-link underline" href="#" title="Зарегистрироваться на сайте">Новая регистрация</a>
                 </p>
               </div>
             </form>
           </li>
           <li class="user-navigation-item basket-item">
-            <a href="" class="user-navigation-link basket-link" title="Перейти к корзине">
+            <a href="#" class="user-navigation-link default-link basket-link" title="Перейти к корзине">
               <span class="basket-value">2 товара</span>
             </a>
             <div class="in-basket">
@@ -105,7 +108,7 @@
         </ul>
         <div class="contact-info">
           <span class="contact-info-time">с&nbsp;10&nbsp;до&nbsp;20,&nbsp;ежедневно</span>
-          <a href="tel:88124502525" class="contact-info-phone" title="">8&nbsp;812&nbsp;450-25-25</a>
+          <a href="tel:88124502525" class="contact-info-phone default-link" title="">8&nbsp;812&nbsp;450-25-25</a>
         </div> 
       </nav>
     </header>
@@ -123,6 +126,7 @@
       </ul>
       <h1 class="page-title">Сливочное мороженое</h1>
       <section class="filter-and-sort">
+        <h2 class="visually-hidden">Фильтр и сортировка товаров</h2>
         <div class="sort">
           <label class="section-title">Сортировка:</label>
           <ul class="sort-params-list clear-list">
@@ -147,10 +151,8 @@
               <div class="range-controls">
                 <div class="scale">
                   <div class="bar" style="width: 114px;"></div>
-                  <div class="toggle toggle-min" tabindex="0" aria-label="Изменить нижнюю границу стоимости"
-                    style="left: 0px;"></div>
-                  <div class="toggle toggle-max" tabindex="0" aria-label="Изменить верхнюю границу стоимости"
-                    style="left: 114px;"></div>
+                  <div class="toggle toggle-min" tabindex="0" aria-label="Изменить нижнюю границу стоимости" style="left: 0px;"></div>
+                  <div class="toggle toggle-max" tabindex="0" aria-label="Изменить верхнюю границу стоимости" style="left: 114px;"></div>
                 </div>
               </div>
             </div>
@@ -224,7 +226,7 @@
               <span class="catalog-item-price">310&nbsp;&#x20bd;</span>
               <span class="catalog-item-kilogram">/кг</span>
             </p>
-            <a class="catalog-item-description" href="#">
+            <a class="catalog-item-description white-link" href="#">
               <span class="description-underline">Сливочное&nbsp;с&nbsp;апельсиновым<br>джемом&nbsp;и&nbsp;цитрусовой стружкой</span>
             </a>
             <button class="catalog-item-btn btn" type="button" aria-label="Подробнее о товаре ">Быстрый&nbsp;просмотр</button>
@@ -237,7 +239,7 @@
               <span class="catalog-item-price">380&nbsp;&#x20bd;</span>
               <span class="catalog-item-kilogram">/кг</span>
             </p>
-            <a class="catalog-item-description" href="#">
+            <a class="catalog-item-description white-link" href="#">
               <span class="description-underline">Сливочно-кофейное&nbsp;с&nbsp;кусочками<br>шоколада</span>
             </a>
             <button class="catalog-item-btn btn" type="button" aria-label="Подробнее о товаре ">Быстрый&nbsp;просмотр</button>
@@ -250,7 +252,7 @@
               <span class="catalog-item-price">355&nbsp;&#x20bd;</span>
               <span class="catalog-item-kilogram">/кг</span>
             </p>
-            <a class="catalog-item-description" href="#">
+            <a class="catalog-item-description white-link" href="#">
               <span class="description-underline">Сливочно-клубничное<br>с&nbsp;присыпкой&nbsp;из&nbsp;белого шоколада</span>
             </a>
             <button class="catalog-item-btn btn" type="button" aria-label="Подробнее о товаре ">Быстрый&nbsp;просмотр</button>
@@ -263,7 +265,7 @@
               <span class="catalog-item-price">415&nbsp;&#x20bd;</span>
               <span class="catalog-item-kilogram">/кг</span>
             </p>
-            <a class="catalog-item-description" href="#">
+            <a class="catalog-item-description white-link" href="#">
               <span class="description-underline">Сливочное крем-брюле<br>с&nbsp;карамельной подливкой</span>
             </a>
             <button class="catalog-item-btn btn" type="button" aria-label="Подробнее о товаре ">Быстрый&nbsp;просмотр</button>
@@ -276,7 +278,7 @@
               <span class="catalog-item-price">325&nbsp;&#x20bd;</span>
               <span class="catalog-item-kilogram">/кг</span>
             </p>
-            <a class="catalog-item-description" href="#">
+            <a class="catalog-item-description white-link" href="#">
               <span class="description-underline">Сливочное с брусничным<br>джемом</span>
             </a>
             <button class="catalog-item-btn btn" type="button" aria-label="Подробнее о товаре ">Быстрый&nbsp;просмотр</button>
@@ -289,7 +291,7 @@
               <span class="catalog-item-price">410&nbsp;&#x20bd;</span>
               <span class="catalog-item-kilogram">/кг</span>
             </p>
-            <a class="catalog-item-description" href="#">
+            <a class="catalog-item-description white-link" href="#">
               <span class="description-underline">Сливочно-черничное с цельными<br>ягодами черники</span>
             </a>
             <button class="catalog-item-btn btn" type="button" aria-label="Подробнее о товаре ">Быстрый&nbsp;просмотр</button>
@@ -302,7 +304,7 @@
               <span class="catalog-item-price">315&nbsp;&#x20bd;</span>
               <span class="catalog-item-kilogram">/кг</span>
             </p>
-            <a class="catalog-item-description" href="#">
+            <a class="catalog-item-description white-link" href="#">
               <span class="description-underline">Сливочно-лимонное с<br>карамельной присыпкой</span>
             </a>
             <button class="catalog-item-btn btn" type="button" aria-label="Подробнее о товаре ">Быстрый&nbsp;просмотр</button>
@@ -315,7 +317,7 @@
               <span class="catalog-item-price">320&nbsp;&#x20bd;</span>
               <span class="catalog-item-kilogram">/кг</span>
             </p>
-            <a class="catalog-item-description" href="#">
+            <a class="catalog-item-description white-link" href="#">
               <span class="description-underline">Сливочное с шоколадной стружкой</span>
             </a>
             <button class="catalog-item-btn btn" type="button" aria-label="Подробнее о товаре ">Быстрый&nbsp;просмотр</button>
@@ -328,7 +330,7 @@
               <span class="catalog-item-price">440&nbsp;&#x20bd;</span>
               <span class="catalog-item-kilogram">/кг</span>
             </p>
-            <a class="catalog-item-description" href="#">
+            <a class="catalog-item-description white-link" href="#">
               <span class="description-underline">Сливочно-ванильное<br>с кусочками шоколада</span>
             </a>
             <button class="catalog-item-btn btn" type="button" aria-label="Подробнее о товаре ">Быстрый&nbsp;просмотр</button>
@@ -341,7 +343,7 @@
               <span class="catalog-item-price">435&nbsp;&#x20bd;</span>
               <span class="catalog-item-kilogram">/кг</span>
             </p>
-            <a class="catalog-item-description" href="#">
+            <a class="catalog-item-description white-link" href="#">
               <span class="description-underline">Сливочноe с ментоловым сиропом</span>
             </a>
             <button class="catalog-item-btn btn" type="button" aria-label="Подробнее о товаре ">Быстрый&nbsp;просмотр</button>
@@ -354,7 +356,7 @@
               <span class="catalog-item-price">355&nbsp;&#x20bd;</span>
               <span class="catalog-item-kilogram">/кг</span>
             </p>
-            <a class="catalog-item-description" href="#">
+            <a class="catalog-item-description white-link" href="#">
               <span class="description-underline">Сливочное с кусочками черного шоколада</span>
             </a>
             <button class="catalog-item-btn btn" type="button" aria-label="Подробнее о товаре ">Быстрый&nbsp;просмотр</button>
@@ -367,7 +369,7 @@
               <span class="catalog-item-price">420&nbsp;&#x20bd;</span>
               <span class="catalog-item-kilogram">/кг</span>
             </p>
-            <a class="catalog-item-description" href="#">
+            <a class="catalog-item-description white-link" href="#">
               <span class="description-underline">Сливочное с мятным сиропом</span>
             </a>
             <button class="catalog-item-btn btn" type="button" aria-label="Подробнее о товаре ">Быстрый&nbsp;просмотр</button>
@@ -425,25 +427,25 @@
 					</a>
 				</li>
 			</ul>
-      <ul class="site-navigation clear-list">
-        <li class="site-navigation-item">
-          <a href="#" class="site-navigation-link">Для&nbsp;поставщиков</a>
+      <ul class="site-navigation footer-navigation clear-list">
+        <li class="footer-navigation-item">
+          <a class="footer-navigation-link default-link underline white-link" href="#">Для&nbsp;поставщиков</a>
         </li>
-        <li class="site-navigation-item">
-          <a href="#" class="site-navigation-link">О&nbsp;производстве</a>
+        <li class="footer-navigation-item">
+          <a class="footer-navigation-link default-link underline white-link" href="#">О&nbsp;производстве</a>
         </li>
-        <li class="site-navigation-item">
-          <a href="#" class="site-navigation-link">Наши&nbsp;документы</a>
+        <li class="footer-navigation-item">
+          <a class="footer-navigation-link default-link underline white-link" href="#">Наши&nbsp;документы</a>
         </li>
-        <li class="site-navigation-item">
-          <a href="#" class="site-navigation-link">Экологические&nbsp;стандарты</a>
+        <li class="footer-navigation-item">
+          <a class="footer-navigation-link default-link underline white-link" href="#">Экологические&nbsp;стандарты</a>
         </li>
       </ul>
       <div class="development-block">
         <a class="development-link" href="https://htmlacademy.ru/intensive/htmlcss" title="Перейти на сайт htmlacademy">
           <img class="development-logo" src="img/html-academy-logo.svg" width="108" height="39" alt="HTML Academy — интерактивные онлайн-курсы по HTML, CSS и JS.">
         </a>
-        <span class="copyright">Сделано&nbsp;в&nbsp;HTML&nbsp;Academy&nbsp;©&nbsp;2019</span>
+        <span class="copyright">Сделано&nbsp;в&nbsp;<a class="copyright-link white-link underline" href="https://htmlacademy.ru/intensive/htmlcss" title="Перейти на сайт htmlacademy">HTML&nbsp;Academy</a>&nbsp;©&nbsp;2019</span>
       </div>
     </footer>
   </body>

@@ -14,11 +14,11 @@
   <body class="page-body page-green">
     <header class="main-header inner-container">
       <nav class="main-navigation">
-        <a class="header-logo default-link">
+        <a class="header-logo">
           <img src="img/logo.svg" width="154" height="64" alt="Логотип магазина Глэйси, это онлайн и офлайн-магазин по продаже мороженого собственного производства на развес">
         </a>
         <ul class="site-navigation clear-list">
-          <li class="site-navigation-item">
+          <li class="site-navigation-item catalog-parent-item">
             <a class="site-navigation-link default-link">Каталог</a>
             <ul class="catalog-submenu-list clear-list">
               <li class="catalog-submenu-item">
@@ -51,8 +51,8 @@
               <span class="visually-hidden">Поиск</span>
             </a>
             <form class="search-form" action="https://echo.htmlacademy.ru/" method="GET">
-              <input class="search-form-field" type="search" name="search" placeholder="Крем-брюле" value="" required>
-              <button class="search-form-btn" type="submit">Найти</button>
+              <input class="form-text-field search-form-field" type="search" name="search" placeholder="Крем-брюле" value="" required>
+              <!--<button class="search-form-btn" type="submit">Найти</button>-->
             </form>
           </li>
           <li class="user-navigation-item login-item">
@@ -60,17 +60,17 @@
             <form class="login-form" action="https://echo.htmlacademy.ru/" method="POST">
               <p class="login-form-row">
                 <label class="login-form-label visually-hidden" for="login-form-user-email"></label>
-                <input class="login-form-field" id="login-form-user-email" type="email" name="login-user-email" placeholder="email@example.com">
+                <input class="form-text-field login-form-field" id="login-form-user-email" type="email" name="login-user-email" placeholder="email@example.com">
               </p>
               <p class="login-form-row">
                 <label class="login-form-label visually-hidden" for="login-form-user-pass"></label>
-                <input class="login-form-field" id="login-form-user-pass" type="password" name="login-user-pass" placeholder="......">
+                <input class="form-text-field login-form-field" id="login-form-user-pass" type="password" name="login-user-pass" placeholder="......">
               </p>
               <div class="login-form-footer">
                 <button class="login-form-btn btn" type="submit">Войти</button>
                 <p class="login-form-help">
-                  <a class="restore-password default-link" href="#" title="Восстановить пароль">Забыли пароль?</a>
-                  <a class="registration default-link" href="#" title="Зарегистрироваться на сайте">Новая регистрация</a>
+                  <a class="restore-password default-link underline" href="#" title="Восстановить пароль">Забыли пароль?</a>
+                  <a class="registration default-link underline" href="#" title="Зарегистрироваться на сайте">Новая регистрация</a>
                 </p>
               </div>
             </form>
@@ -93,7 +93,7 @@
         <h2 class="section-title visually-hidden">Слайдер с нашим мороженым</h2>
         <ul class="main-slider-list clear-list">
           <li class="main-slider-item current-slide">
-            <img class="banner-image" src="img/creme-brulee-and-sundae-with raspberry-jam.png" width="647" height="584" alt="Крем-брюле и пломбир с малиновым джемом в вафельном рожке">
+            <img class="banner-image" src="img/creme-brulee-and-sundae-with-raspberry-jam.png" width="647" height="584" alt="Крем-брюле и пломбир с малиновым джемом в вафельном рожке">
             <span class="banner-title">Крем-брюле&nbsp;и&nbsp;пломбир<br>с&nbsp;малиновым джемом</span>
             <button class="banner-btn btn" type="button" aria-label="Добавить крем-брюле и пломбир с малиновым джемом в корзину">Давайте&nbsp;оба!</button>
           </li>
@@ -150,8 +150,8 @@
               <span class="catalog-item-price">310&nbsp;&#x20bd;</span>
               <span class="catalog-item-kilogram">/кг</span>
             </p>
-            <a class="catalog-item-description" href="#">
-              <span class="description-underline">Сливочное&nbsp;с&nbsp;апельсиновым<br>джемом&nbsp;и&nbsp;цитрусовой стружкой</span>
+            <a class="catalog-item-description white-link" href="#">
+              <span class="underline">Сливочное&nbsp;с&nbsp;апельсиновым<br>джемом&nbsp;и&nbsp;цитрусовой стружкой</span>
             </a>
             <button class="catalog-item-btn btn" type="button" aria-label="Подробнее о товаре ">Быстрый&nbsp;просмотр</button>
           </li>
@@ -164,8 +164,8 @@
               <span class="catalog-item-price">380&nbsp;&#x20bd;</span>
               <span class="catalog-item-kilogram">/кг</span>
             </p>
-            <a class="catalog-item-description" href="#">
-              <span class="description-underline">Сливочно-кофейное&nbsp;с&nbsp;кусочками<br>шоколада</span>
+            <a class="catalog-item-description white-link" href="#">
+              <span class="underline">Сливочно-кофейное&nbsp;с&nbsp;кусочками<br>шоколада</span>
             </a>
             <button class="catalog-item-btn btn" type="button" aria-label="Подробнее о товаре ">Быстрый&nbsp;просмотр</button>
           </li>
@@ -180,8 +180,8 @@
                 <span class="catalog-item-kilogram">/кг</span>
               </span>
             </p>
-            <a class="catalog-item-description" href="#">
-              <span class="description-underline">Сливочно-клубничное<br>с&nbsp;присыпкой&nbsp;из&nbsp;белого шоколада</span>
+            <a class="catalog-item-description white-link" href="#">
+              <span class="underline">Сливочно-клубничное<br>с&nbsp;присыпкой&nbsp;из&nbsp;белого шоколада</span>
             </a>
             <button class="catalog-item-btn btn" type="button" aria-label="Подробнее о товаре ">Быстрый&nbsp;просмотр</button>
           </li>
@@ -194,8 +194,8 @@
               <span class="catalog-item-price">415&nbsp;&#x20bd;</span>
               <span class="catalog-item-kilogram">/кг</span>
             </p>
-            <a class="catalog-item-description" href="#">
-              <span class="description-underline">Сливочное крем-брюле<br>с&nbsp;карамельной подливкой</span>
+            <a class="catalog-item-description white-link" href="#">
+              <span class="underline">Сливочное крем-брюле<br>с&nbsp;карамельной подливкой</span>
             </a>
             <button class="catalog-item-btn btn" type="button" aria-label="Подробнее о товаре ">Быстрый&nbsp;просмотр</button>
           </li>
@@ -215,7 +215,9 @@
         <h2 class="visually-hidden">Медиа</h2>
         <article class="blog-article">
           <p class="blog-article-caption">Новое&nbsp;в&nbsp;нашем блоге</p>
-          <a class="blog-article-title default-link" href="#">10&nbsp;способов сервировки<br>фруктовых щербетов<br>к&nbsp;столу</a>
+          <h3 class="blog-article-title"> 
+            <a class="blog-article-link default-link dark-link" href="#">10&nbsp;способов сервировки<br>фруктовых щербетов<br>к&nbsp;столу</a>
+          </h3>
         </article>
         <form class="form-subscription" action="https://echo.htmlacademy.ru/" method="POST">
           <div class="form-subscription-bg">
@@ -229,36 +231,21 @@
         </form>
       </section>
       <section class="contact">
-        <div id="map"></div>
-        <script>
-          function initMap() {
-            let coordinatesmarker = {lat: 59.938635, lng: 30.323118};
-            let coordinates = {lat: 59.938897, lng: 30.328693};
-            let image = "img/pin.svg";
-            map = new google.maps.Map(document.getElementById('map'), {
-                center: coordinates,
-                zoom: 15,
-                disableDefaultUI: true,
-                scrollwheel: false
-            });
-            marker = new google.maps.Marker({
-              position: coordinatesmarker,
-              map: map,
-              icon: image
-            });
-          }
-        </script>
-        <script src="https://maps.googleapis.com/maps/api/js?callback=initMap&key=AIzaSyAImiABCDquzpZQ4aQHQU-g89xQEHinWHM"></script>
-          <p>
-            Адрес главного офиса&nbsp;и&nbsp;офлайн-магазина:
-            <span class="contact-office-address">ул.&nbsp;Большая Конюшенная,<br>19/8,&nbsp;Санкт-Петербург</span>
-          </p>
-          <p>
-            Для заказов по&nbsp;телефону:
-            <a class="contact-office-phone" href="tel:8 812 450-25-25" title="Позвонить по номеру 8 812 450-25-25">8&nbsp;812&nbsp;450-25-25</a>
-            (с&nbsp;10&nbsp;до&nbsp;20&nbsp;ежедневно)
-          </p>
-          <button class="open-contact-form btn" type="button">Форма обратной связи</button>
+        <h2 class="visually-hidden">Контакты:</h2>
+        <div class="contact-map" id="map"></div>
+        <div class="contact-block-inner inner-container">
+          <div class="contact-block">
+            <p class="contact-address">
+              <span class="contact-param">Адрес главного офиса<br>и&nbsp;офлайн-магазина:</span>
+              <span class="contact-value">ул.&nbsp;Большая Конюшенная,<br>19/8,&nbsp;Санкт-Петербург</span>
+            </p>
+            <p class="contact-phone">
+              <span class="contact-param contact-param-phone">Для заказов по&nbsp;телефону:</span>
+              <a class="contact-value dark-link" href="tel:88124502525" title="Позвонить по номеру 8 812 450-25-25">8&nbsp;812&nbsp;450-25-25</a>
+              <span class="contact-param">(с&nbsp;10&nbsp;до&nbsp;20&nbsp;ежедневно)</span>
+            </p>
+            <button class="open-contact-form btn" type="button">Форма обратной связи</button>
+          </div>
         </div>
       </section>
     </main>
@@ -285,48 +272,49 @@
 					</a>
 				</li>
 			</ul>
-      <ul class="site-navigation clear-list">
-        <li class="site-navigation-item">
-          <a class="site-navigation-link default-link" href="#">Для&nbsp;поставщиков</a>
+      <ul class="site-navigation footer-navigation clear-list">
+        <li class="footer-navigation-item">
+          <a class="footer-navigation-link default-link underline white-link" href="#">Для&nbsp;поставщиков</a>
         </li>
-        <li class="site-navigation-item">
-          <a class="site-navigation-link default-link" href="#">О&nbsp;производстве</a>
+        <li class="footer-navigation-item">
+          <a class="footer-navigation-link default-link underline white-link" href="#">О&nbsp;производстве</a>
         </li>
-        <li class="site-navigation-item">
-          <a class="site-navigation-link default-link" href="#">Наши&nbsp;документы</a>
+        <li class="footer-navigation-item">
+          <a class="footer-navigation-link default-link underline white-link" href="#">Наши&nbsp;документы</a>
         </li>
-        <li class="site-navigation-item">
-          <a class="site-navigation-link default-link" href="#">Экологические&nbsp;стандарты</a>
+        <li class="footer-navigation-item">
+          <a class="footer-navigation-link default-link underline white-link" href="#">Экологические&nbsp;стандарты</a>
         </li>
       </ul>
       <div class="development-block">
         <a class="development-link" href="https://htmlacademy.ru/intensive/htmlcss" title="Перейти на сайт htmlacademy">
           <img class="development-logo" src="img/html-academy-logo.svg" width="108" height="39" alt="HTML Academy — интерактивные онлайн-курсы по HTML, CSS и JS.">
         </a>
-        <span class="copyright">Сделано&nbsp;в&nbsp;HTML&nbsp;Academy&nbsp;©&nbsp;2019</span>
+        <span class="copyright">Сделано&nbsp;в&nbsp;<a class="copyright-link white-link underline" href="https://htmlacademy.ru/intensive/htmlcss" title="Перейти на сайт htmlacademy">HTML&nbsp;Academy</a>&nbsp;©&nbsp;2019</span>
       </div>
     </footer>
-		<section class="modal modal-contact">
+		<section class="modal modal-contact"> <!-- +- .modal-open-->
 			<h2 class="modal-contact-title">Мы обязательно вам ответим!</h2>
 			<form class="contact-form" id="contact-form" action="https://echo.htmlacademy.ru/" method="POST">
 				<p class="contact-form-name">
 					<label class="form-label visually-hidden" for="user-name">Ваше имя:</label>
-					<input class="contact-form-field" type="text" id="user-name" name="contact-name" placeholder="Имя Фамилия">
+					<input class="form-text-field contact-form-field" type="text" id="user-name" name="contact-name" placeholder="Имя Фамилия">
 				</p>
 				<p class="contact-form-email">
 					<label class="form-label visually-hidden" for="user-email">Ваш e-mail:</label>
-					<input class="contact-form-field" type="email" id="user-email" name="user-email"
+					<input class="form-text-field contact-form-field" type="email" id="user-email" name="user-email"
 						placeholder="email@example.com">
 				</p>
 				<p class="contact-form-message">
 					<label class="form-label visually-hidden" for="user-massage">Текст письма:</label>
-					<textarea class="contact-form-textarea" id="user-massage" name="user-message"
+					<textarea class="form-textarea-field contact-form-textarea" id="user-massage" name="user-message"
 						placeholder="В свободной форме"></textarea>
 				</p>
 				<button class="contact-form-btn btn" type="submit" aria-label="Отправить заявку">Отправить</button>
 			</form>
 			<button class="modal-close" type="button" aria-label="Закрыть"></button>
 		</section>
+    <div class="overlay"></div> <!-- +- .open-->
     <script src="js/script.js"></script>
   </body>
 </html>
