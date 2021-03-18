@@ -77,7 +77,7 @@
             </form>
           </li>
           <li class="user-navigation-item basket-item">
-            <a href="#" class="user-navigation-link default-link basket-link" title="Перейти к корзине">
+            <a href="#" class="user-navigation-link default-link basket-link full-basket" title="Перейти к корзине">
               <span class="basket-value">2 товара</span>
             </a>
             <div class="in-basket">
@@ -112,16 +112,16 @@
         </div> 
       </nav>
     </header>
-    <main class="main-container">
+    <main class="main-container inner-container">
       <ul class="breadcrumbs clear-list">
         <li class="breadcrumbs-item">
-          <a class="breadcrumbs-link" href="index.html">Главная</a>
+          <a class="breadcrumbs-link default-link underline white-link" href="index.html">Главная</a>
         </li>
         <li class="breadcrumbs-item">
-          <a class="breadcrumbs-link" href="#">Каталог</a>
+          <a class="breadcrumbs-link default-link underline white-link" href="#">Каталог</a>
         </li>
         <li class="breadcrumbs-item">
-          <a class="breadcrumbs-link current">Сливочное</a>
+          <a class="breadcrumbs-link default-link underline white-link current">Сливочное</a>
         </li>
       </ul>
       <h1 class="page-title">Сливочное мороженое</h1>
@@ -129,20 +129,15 @@
         <h2 class="visually-hidden">Фильтр и сортировка товаров</h2>
         <div class="sort">
           <label class="section-title">Сортировка:</label>
-          <ul class="sort-params-list clear-list">
-            <li class="sort-params-item">
-              <a class="sort-params-link sort-params-link-active" href="#">по&nbsp;популярности</a>
-            </li>
-            <li class="sort-params-item">
-              <a class="sort-params-link" href="#">сначала&nbsp;недорогие</a>
-            </li>
-            <li class="sort-params-item">
-              <a class="sort-params-link" href="#">сначала&nbsp;дорогие</a>
-            </li>
-            <li class="sort-params-item">
-              <a class="sort-params-link" href="#">по&nbsp;жирности</a>
-            </li>
-          </ul>
+          <div class="custom-select">
+            <select class="standard-select" id="standard-select">
+              <option value="popular">по&nbsp;популярности</option>
+              <option value="cheap">сначала&nbsp;недорогие</option>
+              <option value="expensive">сначала&nbsp;дорогие</option>
+              <option value="fat-content">по&nbsp;жирности</option>
+            </select>
+            <span class="focus"></span>
+          </div>
         </div>
         <form class="filter-form" action="https://echo.htmlacademy.ru/" method="GET" target="_blank">
           <fieldset class="filter-group">
@@ -159,7 +154,7 @@
           </fieldset>
           <fieldset class="filter-group">
             <legend class="filter-title">Жирность:</legend>
-            <ul class="bluetooth-list clear-list">
+            <ul class="fat-content-list clear-list">
               <li class="filters-item">
                 <input class="custom-choice custom-radio visually-hidden" type="radio" id="zero-percent-field" name="fat-percentage"
                   value="zero-percent" aria-hidden="true" tabindex="-1">
@@ -184,7 +179,7 @@
           </fieldset>
           <fieldset class="filter-group">
             <legend class="filter-title">Наполнители:</legend>
-            <ul class="colors-list clear-list">
+            <ul class="fillings-list clear-list">
               <li class="filters-item">
                 <input class="custom-choice custom-checkbox visually-hidden" type="checkbox" id="chocolate-filling-field"
                   name="filler" value="chocolate-filling" aria-hidden="true" tabindex="-1" checked>
@@ -404,7 +399,7 @@
 				</ul>
       </section>
     </main>
-    <footer class="main-footer">
+    <footer class="main-footer inner-container">
 			<ul class="social-list clear-list">
 				<li class="social-item">
 					<a class="social-link social-facebook" href="#">
