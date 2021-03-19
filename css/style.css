@@ -1848,6 +1848,8 @@ img {
 
 .pagination {
   justify-content: flex-end;
+  padding-bottom: 29px;
+  border-bottom: 1px solid var(--basic-white-transparent-02);
 }
 
 .inner-page-backlight::before {
