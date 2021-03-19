@@ -81,28 +81,32 @@
               <span class="basket-value">2 товара</span>
             </a>
             <div class="in-basket">
-              <ul class="in-basket-list">
+              <ul class="in-basket-list clear-list">
                 <li class="in-basket-item">
-                  <button type="button" class="in-basket-delete"></button>
+                  <button class="in-basket-delete" type="button"></button>
                   <img class="in-basket-img" src="img/orange-ice-cream-min.jpg" width="33" height="33" alt="" >
                   <span class="in-basket-title">Пломбир&nbsp;с&nbsp;апельсиновым джемом</span>
                   <p class="in-basket-count">
-                    <span class="in-basket-weight">1,5&nbsp;кг</span>х<span class="in-basket-price">200&nbsp;руб.</span>
+                    <span class="in-basket-weight">1,5&nbsp;кг</span>
+                    <span class="in-basket-separator">х</span>
+                    <span class="in-basket-price">200&nbsp;руб.</span>
                   </p>
                   <p class="in-basket-summ">300&nbsp;руб.</p>
                 </li>
                 <li class="in-basket-item">
-                  <button type="button" class="in-basket-delete"></button>
+                  <button class="in-basket-delete" type="button"></button>
                   <img class="in-basket-img" src="img/strawberry-ice-cream-min.jpg" width="33" height="33" alt="" >
                   <span class="in-basket-title">Клубничный пломбир&nbsp;с&nbsp;присыпкой<br>из&nbsp;белого шоколада</span>
                   <p class="in-basket-count">
-                    <span class="in-basket-weight">1,5&nbsp;кг</span>х<span class="in-basket-price">300&nbsp;руб.</span>
+                    <span class="in-basket-weight">1,5&nbsp;кг</span>
+                    <span class="in-basket-separator">х</span>
+                    <span class="in-basket-price">300&nbsp;руб.</span>
                   </p>
                   <p class="in-basket-summ">450&nbsp;руб.</p>
                 </li>
               </ul>
-              <p class="in-basket-summ">Итого:&nbsp;<span class="in-basket-value">750&nbsp;руб.</span></p>
-              <a href="#" class="in-basket-link">Оформить заказ</a>
+              <p class="in-basket-total">Итого:&nbsp;<span class="in-basket-value">750&nbsp;руб.</span></p>
+              <a href="#" class="btn in-basket-link">Оформить заказ</a>
             </div>
           </li>
         </ul>
@@ -128,7 +132,7 @@
       <section class="filter-and-sort">
         <h2 class="visually-hidden">Фильтр и сортировка товаров</h2>
         <div class="sort">
-          <label class="section-title">Сортировка:</label>
+          <span class="section-title">Сортировка:</span>
           <form class="custom-select">
               <div class="custom-selected">
                 <span class="custom-selected-value"  data-state="">по&nbsp;популярности</span>
@@ -154,19 +158,19 @@
           </form>
         </div>
         <form class="filter-form" action="https://echo.htmlacademy.ru/" method="GET" target="_blank">
-          <fieldset class="filter-group">
-            <legend class="filter-title">Цена:&nbsp;<span class="min-price" style="left: 0px;">100&nbsp;&#x20bd;</span>&nbsp;-&nbsp;<span class="max-price" style="left: 124px;">500&nbsp;&#x20bd;</span></legend>
+          <fieldset class="filter-group filter-group-price">
+            <legend class="filter-title">Цена:&nbsp;<span class="min-price">100&nbsp;&#x20bd;</span>&nbsp;-&nbsp;<span class="max-price">500&nbsp;&#x20bd;</span></legend>
             <div class="range-filter">
               <div class="range-controls">
                 <div class="scale">
-                  <div class="bar" style="width: 114px;"></div>
-                  <div class="toggle toggle-min" tabindex="0" aria-label="Изменить нижнюю границу стоимости" style="left: 0px;"></div>
-                  <div class="toggle toggle-max" tabindex="0" aria-label="Изменить верхнюю границу стоимости" style="left: 114px;"></div>
+                  <div class="bar" style="width: 98px; margin-left: 23px;"></div>
+                  <div class="toggle toggle-min" tabindex="0" aria-label="Изменить нижнюю границу стоимости" style="left: 13px;"></div>
+                  <div class="toggle toggle-max" tabindex="0" aria-label="Изменить верхнюю границу стоимости" style="left: 111px;"></div>
                 </div>
               </div>
             </div>
           </fieldset>
-          <fieldset class="filter-group">
+          <fieldset class="filter-group filter-group-fat">
             <legend class="filter-title">Жирность:</legend>
             <ul class="fat-content-list clear-list">
               <li class="filters-item">
@@ -182,16 +186,16 @@
               <li class="filters-item">
                 <input class="custom-choice custom-radio visually-hidden" type="radio" id="less-thirty-percent-field" name="fat-percentage"
                   value="less-thirty-percent" aria-hidden="true" tabindex="-1">
-                <label class="filter-label" for="less-thirty-percent-field" tabindex="0">менее 30%</label>
+                <label class="filter-label" for="less-thirty-percent-field" tabindex="0">до 30%</label>
               </li>
               <li class="filters-item">
                 <input class="custom-choice custom-radio visually-hidden" type="radio" id="more-thirty-percent-field" name="fat-percentage"
                   value="more-thirty-percent" aria-hidden="true" tabindex="-1">
-                <label class="filter-label" for="more-thirty-percent-field" tabindex="0">более 30%</label>
+                <label class="filter-label" for="more-thirty-percent-field" tabindex="0">выше 30%</label>
               </li>
             </ul>
           </fieldset>
-          <fieldset class="filter-group">
+          <fieldset class="filter-group filter-group-filling">
             <legend class="filter-title">Наполнители:</legend>
             <ul class="fillings-list clear-list">
               <li class="filters-item">
@@ -221,7 +225,7 @@
               </li>
             </ul>
           </fieldset>
-          <button class="btn filter-button" type="submit">Применить</button>
+          <button class="filter-button" type="submit">Применить</button>
         </form>
       </section>
       <section class="catalog">
