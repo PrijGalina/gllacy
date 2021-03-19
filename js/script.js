@@ -82,3 +82,81 @@ main_slider_controls.forEach(function (item, num) {
     item.blur();
   });
 });
+
+
+/* contact modal form */
+let overlay = document.querySelector(".overlay");
+let contact_modal_open_button = document.querySelector(".open-contact-form");
+let contact_modal = document.querySelector(".modal-contact");
+let iterationCount = 0;
+let isStorageSupport = true;
+const storage_name = "";
+const storage_email = "";
+
+try {
+  storage_name = localStorage.getItem("name");
+  storage_email = localStorage.getItem("email");
+}
+catch (err) {
+  isStorageSupport = false;
+}
+
+if (contact_modal) {
+
+  let contact_modal_close = contact_modal.querySelector(".modal-close");
+  let contact_form = contact_modal.querySelector(".contact-form");
+  let contact_field_name = contact_form.querySelector("[name=contact-name]");
+  let contact_field_email = contact_form.querySelector("[name=user-email]");
+  let contact_feld_message = contact_form.querySelector("textarea");
+  contact_modal_open_button.addEventListener("click", function (e) {
+    e.preventDefault();
+    overlay.classList.add("open");
+    contact_modal.classList.add("modal-open");
+    contact_modal.classList.add("modal-emergence");
+    if (storage_name) {
+      contact_field_name.value = storage_name;
+      contact_field_email.value = storage_email;
+      contact_feld_message.focus();
+    }
+    else {
+      contact_field_name.focus();
+    }
+  });
+
+  contact_modal_close.addEventListener("click", function (e) {
+    e.preventDefault();
+    contact_modal.classList.remove("modal-open");
+    contact_modal.classList.remove("modal-emergence");
+    overlay.classList.remove("open");
+    contact_modal.classList.remove("modal-error");
+  });
+
+  contact_form.addEventListener("submit", function (e) {
+    if (!contact_field_name.value || !contact_field_email.value) {
+      e.preventDefault();
+      contact_modal.classList.add("modal-error");
+    }
+    else {
+      if (isStorageSupport) {
+        localStorage.setItem("name", contact_field_name.value);
+        localStorage.setItem("email", contact_field_email.value);
+      }
+    }
+  });
+
+  //
+  contact_modal.addEventListener("animationend", () => {
+    if (contact_modal.classList.contains("modal-error")) {
+      contact_modal.classList.remove("modal-error");
+      contact_modal.classList.remove("modal-emergence");
+    }
+  });
+}
+if (overlay) {
+  overlay.addEventListener("click", function (e) {
+    e.preventDefault();
+    contact_modal.classList.remove("modal-open");
+    contact_modal.classList.remove("modal-emergence");
+    overlay.classList.remove("open");
+  });
+}
