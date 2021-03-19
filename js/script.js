@@ -44,7 +44,6 @@ if(selectSingle){
   const selectSingle_title = selectSingle.querySelector('.custom-selected-value');
   const selectSingle_labels = selectSingle.querySelectorAll('.select-content-label');
 
-  // Toggle menu
   selectSingle_title.addEventListener('click', () => {
     if ('active' === selectSingle.getAttribute('data-state')) {
       selectSingle.setAttribute('data-state', '');
@@ -53,7 +52,6 @@ if(selectSingle){
     }
   });
 
-  // Close when click to option
   for (let i = 0; i < selectSingle_labels.length; i++) {
     selectSingle_labels[i].addEventListener('click', (evt) => {
       selectSingle_title.textContent = evt.target.textContent;
@@ -61,3 +59,26 @@ if(selectSingle){
     });
   }
 }
+
+let body_element = document.querySelector(".page-body");
+let main_slider_controls = document.querySelectorAll(".main-slider-controls-item");
+let main_slider_items = document.querySelectorAll(".main-slider-item");
+
+main_slider_controls.forEach(function (item, num) {
+  item.addEventListener("click", function (e) {
+    e.preventDefault();
+    let main_slider_control_active = document.querySelector(".current-controls");
+    let main_slider_item_active = document.querySelector(".current-slide");
+    if (item !== main_slider_control_active) {
+      main_slider_control_active.classList.remove("current-controls");
+      main_slider_item_active.classList.remove("current-slide");
+      item.classList.add("current-controls");
+      main_slider_items[num].classList.add("current-slide");
+      let page_current_class = main_slider_item_active.getAttribute('data-page-bg');
+      body_element.classList.remove(page_current_class);
+    }
+    let page_class = main_slider_items[num].getAttribute('data-page-bg');
+    body_element.classList.add(page_class);
+    item.blur();
+  });
+});
