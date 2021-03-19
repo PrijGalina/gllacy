@@ -11,7 +11,7 @@
     <link href="css/normalize.min.css" rel="stylesheet">
     <link href="css/style.css" rel="stylesheet">
   </head>
-  <body class="page-body page-green inner-page-backlight">
+  <body class="page-body page-green inner-page inner-page-backlight">
     <header class="main-header inner-container">
       <nav class="main-navigation">
         <a class="header-logo" href="index.html" aria-label="Ссылка для перехода на главную страницу сайта">
@@ -116,8 +116,8 @@
         </div> 
       </nav>
     </header>
-    <main class="main-container inner-container">
-      <ul class="breadcrumbs clear-list">
+    <main class="main-container">
+      <ul class="breadcrumbs inner-container clear-list">
         <li class="breadcrumbs-item">
           <a class="breadcrumbs-link default-link underline white-link" href="index.html">Главная</a>
         </li>
@@ -128,8 +128,8 @@
           <a class="breadcrumbs-link default-link underline white-link current">Сливочное</a>
         </li>
       </ul>
-      <h1 class="page-title">Сливочное мороженое</h1>
-      <section class="filter-and-sort">
+      <h1 class="page-title inner-container">Сливочное мороженое</h1>
+      <section class="filter-and-sort inner-container">
         <h2 class="visually-hidden">Фильтр и сортировка товаров</h2>
         <div class="sort">
           <span class="section-title">Сортировка:</span>
@@ -159,7 +159,7 @@
         </div>
         <form class="filter-form" action="https://echo.htmlacademy.ru/" method="GET" target="_blank">
           <fieldset class="filter-group filter-group-price">
-            <legend class="filter-title">Цена:&nbsp;<span class="min-price">100&nbsp;&#x20bd;</span>&nbsp;-&nbsp;<span class="max-price">500&nbsp;&#x20bd;</span></legend>
+            <legend class="filter-title">Цена:&nbsp;<span class="min-price">100&nbsp;&#x20bd;</span>&nbsp;&ndash;&nbsp;<span class="max-price">500&nbsp;&#x20bd;</span></legend>
             <div class="range-filter">
               <div class="range-controls">
                 <div class="scale">
@@ -229,8 +229,8 @@
         </form>
       </section>
       <section class="catalog">
-        <h2 class="visually-hidden">Список товаров</h2>
-        <ul class="catalog-list clear-list">
+        <h2 class="visually-hidden inner-container">Список товаров</h2>
+        <ul class="catalog-list inner-container-wide clear-list">
           <li class="catalog-item">
             <div class="catalog-item-image">
               <img class="catalog-item-picture" src="img/orange-ice-cream.png" width="267" height="267" alt="Апельсиновое мороженое с цитрусовой стружкой">
@@ -266,7 +266,7 @@
               <span class="catalog-item-kilogram">/кг</span>
             </p>
             <a class="catalog-item-description white-link" href="#">
-              <span class="underline">Сливочно-клубничное<br>с&nbsp;присыпкой&nbsp;из&nbsp;белого шоколада</span>
+              <span class="underline">Сливочно-клубничное с<br>присыпкой&nbsp;из&nbsp;белого шоколада</span>
             </a>
             <button class="catalog-item-btn btn" type="button" aria-label="Подробнее о товаре ">Быстрый&nbsp;просмотр</button>
           </li>
@@ -388,7 +388,7 @@
             <button class="catalog-item-btn btn" type="button" aria-label="Подробнее о товаре ">Быстрый&nbsp;просмотр</button>
           </li>
         </ul>
-        <ul class="pagination clear-list">
+        <ul class="pagination inner-container clear-list">
           <li>
             <a class="pagination-link pagination-btn prev-link disabled-link" href="#">Назад</a>
           </li>
