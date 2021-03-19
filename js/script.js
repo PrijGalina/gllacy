@@ -90,6 +90,7 @@ let contact_modal_open_button = document.querySelector(".open-contact-form");
 let contact_modal = document.querySelector(".modal-contact");
 let iterationCount = 0;
 let isStorageSupport = true;
+let login_form = document.querySelector(".login-form");
 const storage_name = "";
 const storage_email = "";
 
@@ -99,6 +100,22 @@ try {
 }
 catch (err) {
   isStorageSupport = false;
+}
+
+if(login_form){
+  let login_form_submit = login_form.querySelector(".login-form-btn"); 
+  let login_field_email = login_form.querySelector("[name=login-user-email]");
+  let login_field_pass = login_form.querySelector("[name=login-user-pass]");
+  login_form.addEventListener("submit", function (e) {
+    e.preventDefault();
+    if (!login_field_email.value || !login_field_pass.value) {
+      e.preventDefault();
+      login_form.classList.add("modal-error");
+    }
+    else{
+      login_form.submit()
+    }
+  });
 }
 
 if (contact_modal) {
