@@ -129,15 +129,29 @@
         <h2 class="visually-hidden">Фильтр и сортировка товаров</h2>
         <div class="sort">
           <label class="section-title">Сортировка:</label>
-          <div class="custom-select">
-            <select class="standard-select" id="standard-select">
-              <option value="popular">по&nbsp;популярности</option>
-              <option value="cheap">сначала&nbsp;недорогие</option>
-              <option value="expensive">сначала&nbsp;дорогие</option>
-              <option value="fat-content">по&nbsp;жирности</option>
-            </select>
-            <span class="focus"></span>
-          </div>
+          <form class="custom-select">
+              <div class="custom-selected">
+                <span class="custom-selected-value"  data-state="">по&nbsp;популярности</span>
+              </div>
+              <ul class="select-content-list clear-list">
+                <li class="select-content-item">
+                  <input class="select-content-option" id="popular" type="radio" value="popular-value" name="custom-select-list" checked/>
+                  <label class="select-content-label" for="popular">по&nbsp;популярности</label>
+                </li>
+                <li class="select-content-item">
+                  <input class="select-content-option" id="cheap" type="radio" value="cheap-value" name="custom-select-list"/>
+                  <label class="select-content-label" for="cheap">сначала&nbsp;недорогие</label>
+                </li>
+                <li class="select-content-item">
+                  <input class="select-content-option" id="expensive" type="radio" value="expensive-value" name="custom-select-list"/>
+                  <label class="select-content-label" for="expensive">сначала&nbsp;дорогие</label>
+                </li>
+                <li class="select-content-item">
+                  <input class="select-content-option" id="fat-content" type="radio" value="fat-content-value" name="custom-select-list"/>
+                  <label class="select-content-label" for="fat-content">по&nbsp;жирности</label>
+                </li>
+              </ul>
+          </form>
         </div>
         <form class="filter-form" action="https://echo.htmlacademy.ru/" method="GET" target="_blank">
           <fieldset class="filter-group">
@@ -207,7 +221,7 @@
               </li>
             </ul>
           </fieldset>
-          <button class="button filter-button" type="submit">Применить</button>
+          <button class="btn filter-button" type="submit">Применить</button>
         </form>
       </section>
       <section class="catalog">
@@ -443,5 +457,6 @@
         <span class="copyright">Сделано&nbsp;в&nbsp;<a class="copyright-link white-link underline" href="https://htmlacademy.ru/intensive/htmlcss" title="Перейти на сайт htmlacademy">HTML&nbsp;Academy</a>&nbsp;©&nbsp;2019</span>
       </div>
     </footer>
+    <script src="js/script.js"></script>
   </body>
 </html>
