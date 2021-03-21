@@ -38,28 +38,6 @@ if(map_block){
   }());
 }
 
-
-const selectSingle = document.querySelector(".custom-select");
-if(selectSingle){
-  const selectSingle_title = selectSingle.querySelector(".custom-selected-value");
-  const selectSingle_labels = selectSingle.querySelectorAll(".select-content-label");
-
-  selectSingle_title.addEventListener("click", () => {
-    if ("active" === selectSingle.getAttribute("data-state")) {
-      selectSingle.setAttribute("data-state", "");
-    } else {
-      selectSingle.setAttribute("data-state", "active");
-    }
-  });
-
-  for (let i = 0; i < selectSingle_labels.length; i++) {
-    selectSingle_labels[i].addEventListener("click", (evt) => {
-      selectSingle_title.textContent = evt.target.textContent;
-      selectSingle.setAttribute("data-state", "");
-    });
-  }
-}
-
 let body_element = document.querySelector(".page-body");
 let main_slider_controls = document.querySelectorAll(".main-slider-controls-item");
 let main_slider_items = document.querySelectorAll(".main-slider-item");

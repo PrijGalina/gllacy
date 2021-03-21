@@ -28,7 +28,7 @@
                 <a class="catalog-submenu-link default-link" href="catalog.html">Сливочное</a>
               </li>
               <li class="catalog-submenu-item">
-                <a class="catalog-submenu-link default-link" href="#">Щербеты</a>
+                <a class="catalog-submenu-link default-link current-page" href="#">Щербеты</a>
               </li>
               <li class="catalog-submenu-item">
                 <a class="catalog-submenu-link default-link" href="#">Фруктовый лед</a>
@@ -133,30 +133,13 @@
       <section class="filter-and-sort inner-container">
         <h2 class="visually-hidden">Фильтр и сортировка товаров</h2>
         <div class="sort">
-          <span class="section-title">Сортировка:</span>
-          <form class="custom-select">
-              <div class="custom-selected">
-                <span class="custom-selected-value"  data-state="">по&nbsp;популярности</span>
-              </div>
-              <ul class="select-content-list clear-list">
-                <li class="select-content-item">
-                  <input class="select-content-option" id="popular" type="radio" value="popular-value" name="custom-select-list" checked/>
-                  <label class="select-content-label" for="popular">по&nbsp;популярности</label>
-                </li>
-                <li class="select-content-item">
-                  <input class="select-content-option" id="cheap" type="radio" value="cheap-value" name="custom-select-list"/>
-                  <label class="select-content-label" for="cheap">сначала&nbsp;недорогие</label>
-                </li>
-                <li class="select-content-item">
-                  <input class="select-content-option" id="expensive" type="radio" value="expensive-value" name="custom-select-list"/>
-                  <label class="select-content-label" for="expensive">сначала&nbsp;дорогие</label>
-                </li>
-                <li class="select-content-item">
-                  <input class="select-content-option" id="fat-content" type="radio" value="fat-content-value" name="custom-select-list"/>
-                  <label class="select-content-label" for="fat-content">по&nbsp;жирности</label>
-                </li>
-              </ul>
-          </form>
+          <label class="section-title" for="catalog-select">Сортировка:</label>
+          <select class="custom-select" id="catalog-select">
+            <option class="select-content-label" value="popular-value" selected>по&nbsp;популярности</option>
+            <option class="select-content-label" value="cheap-value">сначала&nbsp;недорогие</option>
+            <option class="select-content-label" value="expensive-value">сначала&nbsp;дорогие</option>
+            <option class="select-content-label" value="fat-content-value">по&nbsp;жирности</option>
+          </select>
         </div>
         <form class="filter-form" action="https://echo.htmlacademy.ru/" method="GET" target="_blank">
           <fieldset class="filter-group filter-group-price">
