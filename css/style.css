@@ -678,6 +678,7 @@ img {
       box-shadow: 0 2px 2px var(--red-transparent-054);
   border-radius: 26px;
   cursor: pointer;
+  font: inherit;
   font-family: "Roboto", Arial, sans-serif;
   font-weight: 700;
   font-size: 18px;
