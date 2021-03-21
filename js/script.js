@@ -1,11 +1,11 @@
 /* map */
-const map_block = document.querySelector('#map');
+const map_block = document.querySelector("#map");
 if(map_block){
   function initMap() {
     let coordinatesmarker = {lat: 59.938635, lng: 30.323118};
     let coordinates = {lat: 59.938897, lng: 30.328693};
     let image = "img/pin.svg";
-    map = new google.maps.Map(document.getElementById('map'), {
+    map = new google.maps.Map(document.getElementById("map"), {
         center: coordinates,
         zoom: 15,
         disableDefaultUI: true,
@@ -19,7 +19,7 @@ if(map_block){
   }
 
   function addScript(src){
-    var script = document.createElement('script');
+    var script = document.createElement("script");
     script.src = src;
     script.async = false; 
     document.head.appendChild(script);
@@ -39,23 +39,23 @@ if(map_block){
 }
 
 
-const selectSingle = document.querySelector('.custom-select');
+const selectSingle = document.querySelector(".custom-select");
 if(selectSingle){
-  const selectSingle_title = selectSingle.querySelector('.custom-selected-value');
-  const selectSingle_labels = selectSingle.querySelectorAll('.select-content-label');
+  const selectSingle_title = selectSingle.querySelector(".custom-selected-value");
+  const selectSingle_labels = selectSingle.querySelectorAll(".select-content-label");
 
-  selectSingle_title.addEventListener('click', () => {
-    if ('active' === selectSingle.getAttribute('data-state')) {
-      selectSingle.setAttribute('data-state', '');
+  selectSingle_title.addEventListener("click", () => {
+    if ("active" === selectSingle.getAttribute("data-state")) {
+      selectSingle.setAttribute("data-state", "");
     } else {
-      selectSingle.setAttribute('data-state', 'active');
+      selectSingle.setAttribute("data-state", "active");
     }
   });
 
   for (let i = 0; i < selectSingle_labels.length; i++) {
-    selectSingle_labels[i].addEventListener('click', (evt) => {
+    selectSingle_labels[i].addEventListener("click", (evt) => {
       selectSingle_title.textContent = evt.target.textContent;
-      selectSingle.setAttribute('data-state', '');
+      selectSingle.setAttribute("data-state", "");
     });
   }
 }
@@ -74,10 +74,10 @@ main_slider_controls.forEach(function (item, num) {
       main_slider_item_active.classList.remove("current-slide");
       item.classList.add("current-controls");
       main_slider_items[num].classList.add("current-slide");
-      let page_current_class = main_slider_item_active.getAttribute('data-page-bg');
+      let page_current_class = main_slider_item_active.getAttribute("data-page-bg");
       body_element.classList.remove(page_current_class);
     }
-    let page_class = main_slider_items[num].getAttribute('data-page-bg');
+    let page_class = main_slider_items[num].getAttribute("data-page-bg");
     body_element.classList.add(page_class);
     item.blur();
   });
