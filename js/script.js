@@ -47,6 +47,9 @@ main_slider_controls.forEach(function (item, num) {
     e.preventDefault();
     let main_slider_control_active = document.querySelector(".current-controls");
     let main_slider_item_active = document.querySelector(".current-slide");
+    let  main_slider_control_btn = item.querySelector(".main-slider-controls-btn");
+    main_slider_control_btn.blur();
+    item.blur();
     if (item !== main_slider_control_active) {
       main_slider_control_active.classList.remove("current-controls");
       main_slider_item_active.classList.remove("current-slide");
@@ -57,7 +60,6 @@ main_slider_controls.forEach(function (item, num) {
     }
     let page_class = main_slider_items[num].getAttribute("data-page-bg");
     body_element.classList.add(page_class);
-    item.blur();
   });
 });
 
